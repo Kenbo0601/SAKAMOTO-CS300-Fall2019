@@ -1,9 +1,14 @@
 <html>
 <body>
 
-<h2>JavaScript Calculator</h2>
+    <h1><font size="10"><center>JavaScript Calculator</center></font></h1>
+    <p><center>Click the button to calculate the values</center></p>
+    <center>
+    <button onclick="calculator()">Try it</button>
+    </center>
 
     <script>
+        function calculator(){
         num1 = prompt("Enter a Value");
         sign = prompt("Enter a sign");
         num2 = prompt("Enter a Value");
@@ -11,6 +16,7 @@
         if(sign == "-") alert(result = eval(num1) - eval(num2));
         if(sign == "*") alert(result = eval(num1) * eval(num2));
         if(sign == "/") alert(result = eval(num1) / eval(num2));
+        }
     </script>
 
 </body>
