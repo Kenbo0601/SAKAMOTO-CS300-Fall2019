@@ -9,12 +9,12 @@
             var num1 = document.forms[0].elements[0].value;
             var sign = document.forms[0].elements[1].value;
             var num2 = document.forms[0].elements[2].value;
-            document.forms[0].elements[3].value = result(num1,num2,sign);
+            document.forms[0].elements[3].value = helper(num1,num2,sign);
         } 
     </script>
 
     <script>
-        function result(num1,num2,sign) {
+        function helper(num1,num2,sign) {
             if(sign == "+")
                 return (eval(num1)+eval(num2));
             if(sign == "-")
