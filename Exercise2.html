@@ -1,1 +1,46 @@
+<html>
+<body>
 
+    <h1 style="color:Tomato;"><font size="10"><center>A Fancy JavaScript Calculator</center></font></h1>
+    <center>
+
+    <script>
+        function calc(){
+            var num1 = document.forms[0].elements[0].value;
+            var sign = document.forms[0].elements[1].value;
+            var num2 = document.forms[0].elements[2].value;
+            document.forms[0].elements[3].value = result(num1,num2,sign);
+        } 
+    </script>
+
+    <script>
+        function result(num1,num2,sign) {
+            if(sign == "+")
+                return (eval(num1)+eval(num2));
+            if(sign == "-")
+                return (eval(num1)-eval(num2));
+            if(sign == "*")
+                return (eval(num1)*eval(num2));
+            if(sign == "/")
+                return (eval(num1)/eval(num2));
+        }
+    </script>
+
+    <form name=Form onSubmit="calc();return false">
+        <input type = text name=num1>
+        <select name = sign onchange="calc()">
+            <option> +
+            <option> -
+            <option> *
+            <option> /
+        </select>
+         <input type = text name=num2>
+         =
+         <input type = text name=result>
+    </form>
+
+
+    </center>
+
+</body>
+</html> 
